@@ -7,7 +7,7 @@ const storageKey = 'videoplayer-current-time';
 player.on('play', onPlay);
 
 function onPlay() {
-  player.on('timeupdate', throttle(saveTimeToStorage, 3000));
+  player.on('timeupdate', throttle(saveTimeToStorage, 1000));
 }
 function saveTimeToStorage(event) {
   // console.log(event.seconds);
