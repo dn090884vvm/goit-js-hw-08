@@ -3,14 +3,14 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://dn090884vvm.github.io/goit-js-hw-08/",
+  "homepage": "https://dn090884vvm.github.io/goit-js-hw-08",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dn090884vvm/goit-js-hw-08"
+    "url": "git+https://dn090884vvm.github.io/goit-js-hw-08"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
