@@ -22,6 +22,8 @@ function getTimeFromStorage() {
 
 getTimeFromStorage();
 
+// =========================================================================
+
 // function findCurrentTime(e) {
 //   console.log(e.seconds);
 //   localStorage.setItem(storageKey, e.seconds);
