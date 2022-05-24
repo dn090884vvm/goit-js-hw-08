@@ -17,7 +17,9 @@ function saveTimeToStorage(event) {
 function getTimeFromStorage() {
   const currentTime = localStorage.getItem(storageKey);
   //   console.log(currentTime);
-  player.setCurrentTime(currentTime);
+  if (currentTime) {
+    player.setCurrentTime(currentTime);
+  }
 }
 
 getTimeFromStorage();
