@@ -53,6 +53,8 @@ function handleSubmit(event) {
 
   event.currentTarget.reset();
   localStorage.removeItem(keyForStorage);
+  inputDatas.email = '';
+  inputDatas.message = '';
 
   //====================================
   //   const {
