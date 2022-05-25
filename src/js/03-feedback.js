@@ -15,10 +15,10 @@ function checkingStorageForDatas() {
 
     fieldDatas.email.value = parsedSavedDatas.email;
     fieldDatas.message.value = parsedSavedDatas.message;
-  } else return;
+  } //else return;
 }
 checkingStorageForDatas();
-const inputDatas = {};
+const inputDatas = { email: '', message: '' };
 
 function handleInput(event) {
   inputDatas[event.target.name] = event.target.value;
@@ -42,7 +42,15 @@ function handleInput(event) {
 fieldDatas.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
-  console.log(inputDatas);
+
+  if (localStorage.length) {
+    const getSavedDatas = localStorage.getItem(keyForStorage);
+    const parsedDaveddatas = JSON.parse(getSavedDatas);
+    console.log(parsedDaveddatas);
+  } else {
+    return;
+  }
+
   event.currentTarget.reset();
   localStorage.removeItem(keyForStorage);
 
