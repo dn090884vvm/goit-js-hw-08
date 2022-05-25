@@ -15,10 +15,14 @@ function checkingStorageForDatas() {
 
     fieldDatas.email.value = parsedSavedDatas.email;
     fieldDatas.message.value = parsedSavedDatas.message;
+    return parsedSavedDatas;
   } //else return;
 }
 checkingStorageForDatas();
-const inputDatas = { email: '', message: '' };
+// const inputDatas = { email: '', message: '' };
+// let inputDatas = parsedDaveddatas || { email: '', message: '' };
+// let inputDatas = parsedSavedDatas;
+let inputDatas = checkingStorageForDatas() || { email: '', message: '' };
 
 function handleInput(event) {
   inputDatas[event.target.name] = event.target.value;
@@ -47,6 +51,7 @@ function handleSubmit(event) {
     const getSavedDatas = localStorage.getItem(keyForStorage);
     const parsedDaveddatas = JSON.parse(getSavedDatas);
     console.log(parsedDaveddatas);
+    // return parsedDaveddatas;
   } else {
     return;
   }
